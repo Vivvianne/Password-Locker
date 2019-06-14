@@ -70,6 +70,13 @@ class Creditial:
         self.password = password
     
     def save_credentials(self):
+        '''
+        Function to save newly created user instance
+        '''
+        #global user_list
+        
+        Credential.credentials_list.append(self)
+        
         
         
     
