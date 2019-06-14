@@ -1,6 +1,6 @@
 import string
 import random
-import pyper clip
+import pyperclip
 
 #Class variables
 #Global variable
@@ -8,6 +8,7 @@ global user-list
 
 
 class User:
+    
  '''
  A class to create user accounts and save them
  
