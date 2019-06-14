@@ -57,4 +57,32 @@ class Creditial:
                 current_user = user.first_name
         return current_user
     
+    def __init__(self, user_name, site_name, account_name, password):
+        
+        '''
+        Method that define properties that each user object will hold.
+        
+        '''
+        #intance variables
+        self.user_name = user_name
+        self.site_name = site_name
+        self.account_name = account_name
+        self.password = password
+    
+    def save_credentials(self):
+        
+        
+    
+        
+    
+    
+    
+    
+        
+
+
+        
+    
+
+    
     
