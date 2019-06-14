@@ -4,7 +4,8 @@ import pyperclip
 
 #Class variables
 #Global variable
-global user-list
+
+global user_list
 
 
 class User:
@@ -15,7 +16,7 @@ class User:
  '''
  #global variable user_list
  
- user-list =[]
+ user_list =[] #empty user list
  
  def __init__(self, firstname, lastname, password):
     '''
@@ -33,3 +34,19 @@ def save_user(self):
     User.user_list.apend(self)
 
 
+class Creditial:
+    '''
+    Class to create account credentials, generate passwords 
+    and save their information.
+    '''
+    
+   #Class variables
+   credetials_list = []
+   user_credentials_list = []
+   
+   @classmethod
+   def check_user(cls,firstname,password):
+       '''
+       Method that checks the name and password entered match the ones in the users_list.
+       
+       '''
