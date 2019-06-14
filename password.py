@@ -50,3 +50,10 @@ class Creditial:
        Method that checks the name and password entered match the ones in the users_list.
        
        '''
+       current user = ''
+       
+       for user in User.user_list:
+           if(user.firstname == firstname and user.password == password):
+               current_user = user.first_name
+            return current_user
+       
