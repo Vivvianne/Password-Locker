@@ -24,3 +24,11 @@ class User:
     self.first_name = first-name
     self.last_name = last_name
     self.password = password
+
+def save_user(self):
+    '''
+    function to save new user instances created
+    '''
+    User.user_list.apend(self)
+
+
