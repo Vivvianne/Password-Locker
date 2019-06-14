@@ -76,6 +76,29 @@ class Creditial:
         #global user_list
         
         Credential.credentials_list.append(self)
+        @classmethod
+        def generate_password(size=9, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+            
+            '''
+            Function to create 9 character password
+            '''
+            gen_pass = ''.join(random.choice(char) for_ in range(size) )
+            return gen_pass
+            
+            
+            
+    @classmethod
+    def display_credentials(cls, user_name):
+        '''
+        Class method to dispaly the list of the credentials saved
+        
+        '''
+        user_credential_list = []
+        for credentials in cls.credential_list:
+            if credentials.user_name = user_name:
+                user_credentials_list.append(credential)
+                return user_credentials_list
+        
         
         
         
