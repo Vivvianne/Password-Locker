@@ -9,11 +9,14 @@ global user_list
 
 
 class User:
+    
     '''
     A class to create and save user accounts and their information
     '''
+    
     # Class Variables
     # global users_list
+    
     users_list = []
 
     def __init__(self, first_name, last_name, password):
@@ -34,17 +37,21 @@ class User:
 
 
 class Credential:
+    
     '''
     Class to create  account credentials, generate passwords and save their information
     '''
     # Class Variables
     credentials_list = []
     user_credentials_list = []
+    
     @classmethod
     def check_user(cls, first_name, password):
+    
         '''
         Method that checks if the name and password entered match entries in the users_list
         '''
+        
         current_user = ''
         for user in User.users_list:
             if (user.first_name == first_name and user.password == password):
