@@ -42,6 +42,26 @@ def create_credential(user_name, site_name, account_name, password):
     new_credential = Credential(user_name,site_name,account_name,password)
     return new_credential
 
+def save_credential(credential):
+    '''
+    Function to save newly created credentials
+    '''
+    Credential.save_credentials(credential)
+    
+def dispaly_credential(user_name):
+    '''
+    Function to dispaly credentials saved by the user
+    
+    '''
+    return Credential.dispaly_credential(user_name)
+
+def copy_credential(site_name):
+    '''
+    Function to copy a credential detail to a clipboard
+    
+    '''
+    return Credential.copy_credetial(site_name)
+
     
 
 
