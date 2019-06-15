@@ -78,7 +78,7 @@ def main():
 			password = input('Enter your password - ').strip()
 			save_user(create_user(first_name,last_name,password))
 			print(" ")
-			print(f"New Account Created for: {first_name} {last_name} using password: {password}")
+			print(f'New Account Created for: {first_name} {last_name} using password: {password}')
 		elif short_code == 'li':
 			print("-"*55)
 			print(' ')
