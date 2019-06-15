@@ -68,7 +68,66 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.site_name, 'Twitter')
         self.assertEqual(self.new_credential.account_name, 'test')
         self.assertEqual(self.new_credential.password, 'her1234')
-    
+        
+    def test_save_credential(self):
+        '''
+        To check whether the new credentials info is saved in the credential list
+        '''
+        self.new_credential.save_credential()
+        facebook = Credential('Viv','facebook','works!','her1234')
+        facebook.save_credentials()
+        self.assertEqual(len(Credential.credential_list), 2)
+        
+    def terDown(self):
+        '''
+        Function to clear the credential list after every test
+        '''
+        Credential.credentials_list=[]
+        User.users_list=[]
+        
+    def test_display_credentials(self):
+        '''
+        Test to check if the display_credentials method, displays the correct credentials.
+        '''
+        self.new_credential.save_credentials()
+        facebook = Credential('ray', 'facebook', 'works', 'her1234')
+        facebook.save_credentials()
+        gmail = Credential('Viv', 'Gmail', 'send', 'her4567')
+        gmail.save_credentials()
+        self.assertEqual(len(Credential.display_credentials(facebook.user_name)), 3)
+        
+    def test_find_by_site_name(self):
+        '''
+        Test to check if the find_by_site_name method returns the correct credential.
+        '''
+        self.new_credential.save_credentials()
+        facebook = Credential('Viv', 'facebook', 'works', 'her1234')
+        facebook.save_credentials()
+        credential_exists = Credential.find_by_site_name('facebook')
+        self.assertEqual(credentials_exist, 'facebook')
+        
+    def test_copy_credentials(self):
+        '''
+        Test to check if the copy a credential method copies the correct credential
+        '''
+        self.new_credential.save_credentials()
+        facebook = Credential('Viv', 'facebook', 'works', 'her1234')
+        facebook.save_credentials()
+        find_credential = None
+        for credential in Credential.user_credentials_list:
+            find_credential = Credential.find_by_site_name(
+                credential.site_name)
+            return pyperclip.copy(find_credential.password)
+        Credential.copy_credential(self.new_credential.site_name)
+        self.assertEqual('pswd100', pyperclip.paste())
+        print(pyperclip.paste())
+        
+        
+        
+        
+if __name__ == '__main__':
+    unittest.main()
+
     
     
     
