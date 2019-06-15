@@ -13,4 +13,12 @@ Generate a password for a new credential/account
 Copy my credentials to the clipboard
 
 ## Behavior Driven Development
-|
+| Behavior | Input | Ototput |
+|:---------|-------|---------|
+|In the terminal; Display codes for navigation| The termianl shows;$./password_locker.py| User should see; Welcome, choose an option: ca-Create Account, li-Log In, ex-Exit |
+|----------|--------|--------|
+|The shell should display prompt for creating an account | Enter: ca | Enter your first name, last name and password |
+|---------|-------|----------|
+| Display prompt for login in | Enter: li | Enter your account name and password |
+|---------|-------|----------|
+| Display codes for navigation | Successful login | 
