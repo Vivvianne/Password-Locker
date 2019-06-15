@@ -26,10 +26,12 @@ Copy my credentials to the clipboard
 
 
 ## SetUp / Installation Requirements
+
 ### Prerequisites
-python3.6
-pip
-pyperclip
+
+python3.6, 
+pip, 
+pyperclip, 
 
 ## Running the Application
 To run the application, in your terminal:
