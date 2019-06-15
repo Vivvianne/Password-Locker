@@ -97,7 +97,7 @@ class Creditial:
         for credentials in cls.credential_list:
             if credentials.user_name = user_name:
                 user_credentials_list.append(credential)
-                return user_credentials_list
+            return user_credentials_list
             
             
             
