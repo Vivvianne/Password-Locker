@@ -2,15 +2,13 @@
 
 import pyperclip
 from password import User
-
-
-
+from password import Credential
 def create_user(fname,lname,password):
-    '''
+    	'''
 	Function to create a new user account
 	'''
-    new_user = User(fname,lname,password)
-    return new_user
+	new_user = User(fname,lname,password)
+	return new_user
 
 def save_user(user):
 	'''
@@ -156,7 +154,7 @@ def main():
    
    
 if __name__ == '__main__':
-    main()
+	main()
       
                                 
                                 
