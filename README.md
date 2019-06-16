@@ -44,3 +44,4 @@ Python3.6
 
 ## License
 MIT
+Here is the link to the licence https://github.com/Vivvianne/Password-Locker/pull/1/commits/adb6a11a86421939ebfc760756935a4cb0efc097
