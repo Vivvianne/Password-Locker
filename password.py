@@ -77,7 +77,7 @@ class Credential:
         Credential.credentials_list.append(self)
     
     @classmethod
-    def generate_password(size):
+    def generate_password(cls, size):
         '''
         Function to generate an 9 character password for a credential
         '''

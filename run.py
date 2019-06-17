@@ -132,7 +132,9 @@ def main():
                                 passwordg = input('Enter your password: ').strip()
                                 break
                             elif psw_choice == 'gp':
-                                passwordg = generate_password()
+                                print("Enter length of password")
+                                plength=int(input())
+                                passwordg = generate_password(plength)
                                 break
                             elif psw_choice == 'ex':
                                 break
