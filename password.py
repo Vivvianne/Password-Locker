@@ -77,10 +77,11 @@ class Credential:
         Credential.credentials_list.append(self)
     
     @classmethod
-    def generate_password(size=9, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+    def generate_password(size):
         '''
         Function to generate an 9 character password for a credential
         '''
+        char=string.ascii_uppercase+string.ascii_lowercase+string.digits
         gen_pass = ''.join(random.choice(char) for _ in range(size))
         return gen_pass
 
