@@ -74,22 +74,22 @@ def main():
 			first_name = input('Enter your first name - ').strip()
 			last_name = input('Enter your last name - ').strip()
             print('Use these codes to create your password: \n cp-Create a password \n gp-generate_password automatically ')
-            shortCode = input('Enter a choice: ').lower().strip()
+		    shortCode = input('Enter a choice: ').lower().strip()
             if shortCode == 'cp':
                 password = input('Enter your password - ').strip()
             elif shortCode == 'gp':
                 password_gen = int(input("Enter the length of your prefered password"))
                 password= Credential.generate_password(password_gen)
-            save_user(create_user(first_name,last_name,password))
-            print(" ")
-            print(f'New Account Created for: {first_name} {last_name} using password: {password}')
-            elif short_code == 'li':
-                print("-"*55)
-                print(' ')
-                print('To login, enter your account details:')
-                user_name = input('Enter your first name - ').strip()
-                password = str(input('Enter your password - '))
-            user_exists = verify_user(user_name,password)
+			save_user(create_user(first_name,last_name,password))
+			print(" ")
+			print(f'New Account Created for: {first_name} {last_name} using password: {password}')
+		elif short_code == 'li':
+			print("-"*55)
+			print(' ')
+			print('To login, enter your account details:')
+			user_name = input('Enter your first name - ').strip()
+			password = str(input('Enter your password - '))
+			user_exists = verify_user(user_name,password)
 			if user_exists == user_name:
 				print(" ")
 				print(f'Welcome {user_name}. Please choose an option to continue.')
@@ -116,16 +116,16 @@ def main():
 							print("-"*55)
 							if psw_choice == 'ep':
 								print(" ")
-								password = input('Enter your password: ').strip()
+								passwordg = input('Enter your password: ').strip()
 								break
 							elif psw_choice == 'gp':
-								password = generate_password()
+								passwordg = generate_password()
 								break
 							elif psw_choice == 'ex':
 								break
 							else:
 								print('Oops! Wrong option entered. Try again.')
-						save_credential(create_credential(user_name,site_name,account_name,password))
+						save_credential(create_credential(user_name,site_name,account_name,passwordg))
 						print(' ')
 						print(f'Credential Created: Site Name: {site_name} - Account Name: {account_name} - Password: {password}')
 						print(' ')
