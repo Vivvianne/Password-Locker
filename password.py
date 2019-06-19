@@ -5,7 +5,6 @@ import pyperclip
 #Class variables
 #Global variable
 
-global user_list
 
 
 class User:
@@ -34,6 +33,11 @@ class User:
         Function to save a newly created user instance
         '''
         User.users_list.append(self)
+        
+    @classmethod
+    def verify_user(cls, first_name, password):
+        for user in cls.users_list:
+            return (first_name == user.first_name) and (password == user.password)
 
 
 class Credential:
@@ -105,6 +109,7 @@ class Credential:
             if credential.site_name == site_name:
                 return credential
 
+    
     @classmethod
     def copy_credential(cls, site_name):
         '''
